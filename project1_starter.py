@@ -1,7 +1,7 @@
 """
 COMP 163 - Project 1: Character Creator & Saving/Loading
-Name: [Your Name Here]
-Date: [Date]
+Name: Aaron  Williams
+Date: 10-26-25
 
 AI Usage: [Document any AI assistance used]
 Example: AI helped with file I/O error handling logic in save_character function
@@ -16,6 +16,8 @@ def create_character(name, character_class):
     char = create_character("Aria", "Mage")
     # Should return: {"name": "Aria", "class": "Mage", "level": 1, "strength": 5, "magic": 15, "health": 80, "gold": 100}
     """
+    return f"Name:", name, "class: ", character_class
+    
     # TODO: Implement this function
     # Remember to use calculate_stats() function for stat calculation
     pass
@@ -31,6 +33,24 @@ def calculate_stats(character_class, level):
     - Rogues: Medium strength, medium magic, low health
     - Clerics: Medium strength, high magic, high health
     """
+    if character_class == "Atttacker":
+        strenght == 100
+        magic == 5
+        health == 350
+        gold == 30
+        return (strenght, magic, health, gold)
+    if character_class == "Support":
+        strength == 65
+        magic == 15
+        health == 200
+        gold == 70
+        return (strenght, magic, health, gold)
+    if character_class == "Medic":
+        strength == 40
+        magic == 35
+        health == 100
+        gold == 95
+        return (strenght, magic, health, gold)
     # TODO: Implement this function
     # Return a tuple: (strength, magic, health)
     pass
@@ -49,6 +69,18 @@ def save_character(character, filename):
     Health: [health]
     Gold: [gold]
     """
+    filename = open(filename,"w")
+    filename.write(f"Character Name: {character}\n"
+    f"Class: {Character_class}\n" 
+    f"Level: {level}Strength: {strenght}\n" 
+    f"Magic: {magic}\n"
+    f"Health: {health}\n"
+    f"Gold: {gold}")
+    filename.close()
+    filename= open(filename,"r")
+    character = filename.readlines()
+    return character
+    
     # TODO: Implement this function
     # Remember to handle file errors gracefully
     pass
@@ -93,7 +125,8 @@ def level_up(character):
 # Main program area (optional - for testing your functions)
 if __name__ == "__main__":
     print("=== CHARACTER CREATOR ===")
-    print("Test your functions here!")
+    print(create_character("Bobby", "Support"))
+    
     
     # Example usage:
     # char = create_character("TestHero", "Warrior")
