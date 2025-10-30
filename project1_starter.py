@@ -16,7 +16,9 @@ def create_character(name, character_class):
     char = create_character("Aria", "Mage")
     # Should return: {"name": "Aria", "class": "Mage", "level": 1, "strength": 5, "magic": 15, "health": 80, "gold": 100}
     """
-    return f"Name:", name, "class: ", character_class
+    stats = calculate_stats(character_class, level=1)
+    dict =  {"Name": name, "class": character_class, "level": 1, "strength": stats[0], "magic": stats[1], "health": stats[2], "gold": stats[3]}
+    return dict
     
     # TODO: Implement this function
     # Remember to use calculate_stats() function for stat calculation
@@ -34,22 +36,22 @@ def calculate_stats(character_class, level):
     - Clerics: Medium strength, high magic, high health
     """
     if character_class == "Atttacker":
-        strenght == 100
-        magic == 5
-        health == 350
-        gold == 30
+        strenght = 100
+        magic = 5
+        health = 350
+        gold = 30
         return (strenght, magic, health, gold)
     if character_class == "Support":
-        strength == 65
-        magic == 15
-        health == 200
-        gold == 70
+        strength = 65
+        magic = 15
+        health = 200
+        gold = 70
         return (strenght, magic, health, gold)
     if character_class == "Medic":
-        strength == 40
-        magic == 35
-        health == 100
-        gold == 95
+        strength = 40
+        magic = 35
+        health = 100
+        gold = 95
         return (strenght, magic, health, gold)
     # TODO: Implement this function
     # Return a tuple: (strength, magic, health)
