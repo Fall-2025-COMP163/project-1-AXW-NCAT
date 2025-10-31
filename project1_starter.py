@@ -78,7 +78,7 @@ def save_character(character, filename):
     Gold: [gold]
     """
     with open(filename, "w") as file:
-        file.write(f"Character Name: {character['Name']}\n")
+        file.write(f"Character Name: {character['name']}\n")
         file.write(f"Class: {character['class']}\n")
         file.write(f"Level: {character['level']}\n")
         file.write(f"Strength: {character['strength']}\n")
@@ -135,10 +135,13 @@ def level_up(character):
 if __name__ == "__main__":
     print("=== CHARACTER CREATOR ===")
     player = create_character("Bobby", "Support")
+    # dictionary = input()
+    # if dictionary != "player":
+    #     print("FileNotFoundError")
     # print(player)
     # for i in range(len(player)):
     for i in player:
-        character_info = save_character(player, "Character_Log2.txt")
+        character_info = save_character(dictionary, "Character_Log2.txt")
         print(f"{i} {player[i]}")
     
     
