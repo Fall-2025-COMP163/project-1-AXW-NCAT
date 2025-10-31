@@ -17,7 +17,7 @@ def create_character(name, character_class):
     # Should return: {"name": "Aria", "class": "Mage", "level": 1, "strength": 5, "magic": 15, "health": 80, "gold": 100}
     """
     stats = calculate_stats(character_class, level=1)
-    dict =  {"Name": name, "class": character_class, "level": 1, "strength": stats[0], "magic": stats[1], "health": stats[2], "gold": stats[3]}
+    dict =  {"name": name, "class": character_class, "level": 1, "strength": stats[0], "magic": stats[1], "health": stats[2], "gold": stats[3]}
     return dict
     
     # TODO: Implement this function
@@ -54,7 +54,6 @@ def calculate_stats(character_class, level):
         return (strenght, magic, health, gold)
     # TODO: Implement this function
     # Return a tuple: (strength, magic, health)
-    pass
 
 def save_character(character, filename):
     """
