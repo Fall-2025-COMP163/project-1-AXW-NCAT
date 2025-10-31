@@ -1,3 +1,4 @@
+import os
 """
 COMP 163 - Project 1: Character Creator & Saving/Loading
 Name: Aaron  Williams
