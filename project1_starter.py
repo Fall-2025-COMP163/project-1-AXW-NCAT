@@ -35,7 +35,7 @@ def calculate_stats(character_class, level):
     - Rogues: Medium strength, medium magic, low health
     - Clerics: Medium strength, high magic, high health
     """
-    if character_class == "Atttacker":
+    if character_class == "Warrior":
         strenght = 100
         magic = 5
         health = 350
