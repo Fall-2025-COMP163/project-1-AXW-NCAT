@@ -105,6 +105,28 @@ def load_character(filename):
     # with open(filename, "r") as file:
     #     text = file.readlines()
     #     return text
+
+    with open(filename, "r") as file:
+        text = file.readlines()
+        
+        person = {}
+        for line in text:
+            if ":" in line:
+                broken = line.strip().split(":", 1)
+                key = broken[0].strip().lower()
+                value = broken[1].strip()
+                if key == "character name":
+                    person["name"] = value
+                elif key == "class":
+                     person["class"] = value
+                elif key in ["level","strength","magic", "health", "gold"]:
+                    person[key] = int(value)
+                    
+    keys = ["name", "class", "strength", "level", "magic", "health", "gold" ]
+    for key in keys:
+        if key not in person:
+            return None
+    return person
     
     # TODO: Implement this function
     # Remember to handle file not found errors
