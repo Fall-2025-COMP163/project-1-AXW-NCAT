@@ -102,6 +102,10 @@ def load_character(filename):
     Loads character from text file
     Returns: character dictionary if successful, None if file not found
     """
+    with open(filename, "r") as file:
+        text = file.readlines()
+        return text
+    
     # TODO: Implement this function
     # Remember to handle file not found errors
     pass
@@ -146,7 +150,10 @@ if __name__ == "__main__":
     for i in player:
         character_info = save_character(dictionary, "Character_Log2.txt")
         print(f"{i} {player[i]}")
-    
+
+    load = load_character("Character_Log2.txt")
+    for i in load:
+        print(i.strip())
     
     # Example usage:
     # char = create_character("TestHero", "Warrior")
