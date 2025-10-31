@@ -35,23 +35,29 @@ def calculate_stats(character_class, level = 1):
     - Clerics: Medium strength, high magic, high health
     """
     if character_class == "Warrior":
-        strenght = 100
-        magic = 5
+        strength = 100
+        magic = 7
         health = 350
         gold = 30
-        return (strenght, magic, health, gold)
-    elif character_class == "Support":
+        return (strength, magic, health, gold)
+    elif character_class == "Mage":
         strength = 65
         magic = 15
         health = 200
         gold = 70
-        return (strenght, magic, health, gold)
-    elif character_class == "Medic":
+        return (strength, magic, health, gold)
+    elif character_class == "Rogue":
         strength = 40
         magic = 35
         health = 100
         gold = 95
-        return (strenght, magic, health, gold)
+        return (strength, magic, health, gold)
+    elif character_class == "Cleric":
+        strength = 70
+        magic = 21
+        health = 50
+        gold = 120
+        return (strength, magic, health, gold)
     else:
         return("Invalid class")
     # TODO: Implement this function
