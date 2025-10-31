@@ -22,7 +22,7 @@ def create_character(name, character_class):
     
     # TODO: Implement this function
     # Remember to use calculate_stats() function for stat calculation
-
+# I used AI to help fix bugs specfically with my calculate_stats and character_creation functions
 def calculate_stats(character_class, level = 1):
     """
     Calculates base stats based on class and level
