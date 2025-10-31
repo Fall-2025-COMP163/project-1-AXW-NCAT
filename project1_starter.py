@@ -77,21 +77,23 @@ def save_character(character, filename):
     Health: [health]
     Gold: [gold]
     """
-    filename = open(filename,"w")
-    filename.write(f"Character Name: {character}\n"
-    f"Class: {Character_class}\n" 
-    f"Level: {level}Strength: {strenght}\n" 
-    f"Magic: {magic}\n"
-    f"Health: {health}\n"
-    f"Gold: {gold}")
-    filename.close()
-    filename= open(filename,"r")
-    character = filename.readlines()
-    return character
+   with open(filename, "w") as file:
+        # file = open(filename,"w")
+        file.write(f"Character Name: {character['Name']}\n")
+        file.write(f"Class: {character['class']}\n")
+        file.write(f"Level: {character['level']}\n")
+        file.write(f"Strength: {character['strength']}\n")
+        file.write(f"Magic: {character['magic']}\n")
+        file.write(f"Health: {character['health']}\n")
+        file.write(f"Gold: {character['gold']}")
+        file.close()
+        file = open(filename,"r")
+        character = file.readline()
+        file.close()
+        return character
     
     # TODO: Implement this function
     # Remember to handle file errors gracefully
-    pass
 
 def load_character(filename):
     """
@@ -133,7 +135,12 @@ def level_up(character):
 # Main program area (optional - for testing your functions)
 if __name__ == "__main__":
     print("=== CHARACTER CREATOR ===")
-    print(create_character("Bobby", "Support"))
+    player = create_character("Bobby", "Support")
+    # print(player)
+    # for i in range(len(player)):
+    for i in player:
+        character_info = save_character(player, "Character_Log2.txt")
+        print(f"{i} {player[i]}")
     
     
     # Example usage:
