@@ -105,7 +105,8 @@ def load_character(filename):
     # with open(filename, "r") as file:
     #     text = file.readlines()
     #     return text
-
+    if not os.path.exists(filename):
+        return None
     with open(filename, "r") as file:
         text = file.readlines()
         
