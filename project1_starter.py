@@ -23,7 +23,7 @@ def create_character(name, character_class):
     # TODO: Implement this function
     # Remember to use calculate_stats() function for stat calculation
 
-def calculate_stats(character_class, level):
+def calculate_stats(character_class, level = 1):
     """
     Calculates base stats based on class and level
     Returns: tuple of (strength, magic, health)
