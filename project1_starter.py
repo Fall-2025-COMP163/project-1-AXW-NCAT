@@ -89,7 +89,10 @@ def save_character(character, filename):
         file = open(filename,"r")
         character = file.readline()
         file.close()
-        return character
+        if character.strip():
+            return True
+        else:
+            return False
     
     # TODO: Implement this function
     # Remember to handle file errors gracefully
