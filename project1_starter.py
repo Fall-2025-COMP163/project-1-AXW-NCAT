@@ -39,27 +39,27 @@ def calculate_stats(character_class, level = 1):
         magic = 7
         health = 350
         gold = 30
-        return (strength, magic, health, gold)
+        return (strength, magic, health)
     elif character_class == "Mage":
         strength = 65
         magic = 15
         health = 200
         gold = 70
-        return (strength, magic, health, gold)
+        return (strength, magic, health)
     elif character_class == "Rogue":
         strength = 40
         magic = 35
         health = 100
         gold = 95
-        return (strength, magic, health, gold)
+        return (strength, magic, health)
     elif character_class == "Cleric":
         strength = 70
         magic = 21
         health = 50
         gold = 120
-        return (strength, magic, health, gold)
+        return (strength, magic, health)
     else:
-        return("Invalid class")
+        return(2,2,2)
     # TODO: Implement this function
     # Return a tuple: (strength, magic, health)
 
