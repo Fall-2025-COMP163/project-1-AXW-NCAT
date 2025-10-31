@@ -22,7 +22,6 @@ def create_character(name, character_class):
     
     # TODO: Implement this function
     # Remember to use calculate_stats() function for stat calculation
-    pass
 
 def calculate_stats(character_class, level):
     """
