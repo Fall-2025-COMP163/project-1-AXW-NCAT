@@ -1,0 +1,4 @@
+My program is about characters working together to defeat all their enemies.
+Throughout project 1, AI assisted me with every function. It helped me debug and wrigte logic for the code. I commetted this in my program.
+To test my code, you can type the function you wish to test in the "if_name_ =="__main__":" location of my program and see the results there. One thing that's interesting is that I don't have a name list so the user can choose any name they would like.
+My stat calculations were based off the characters role and on trying to make a team game. For example the Warrior has the most health but the least amount of magic. The Medic, on the other hand, has the least amount of health, but the most amount of magic and gold. Therfore, the players will have to relie on eachother to succeed.
