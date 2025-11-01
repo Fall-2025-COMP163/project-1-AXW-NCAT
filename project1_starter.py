@@ -63,7 +63,7 @@ def calculate_stats(character_class, level = 1):
         return(2,2,2)
     # TODO: Implement this function
     # Return a tuple: (strength, magic, health)
-
+#AI assisted me in building this function's code
 def save_character(character, filename):
     """
     Saves character to text file in specific format
@@ -97,7 +97,7 @@ def save_character(character, filename):
     
     # TODO: Implement this function
     # Remember to handle file errors gracefully
-
+#AI assisted me in building this function's code
 def load_character(filename):
     """
     Loads character from text file
